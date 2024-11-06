@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eu te amo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="gallery-container">
+        <h1>Galeria de Momentos Especiais</h1>
+        <div class="photo-gallery">
+            <div class="photo-frame" onclick="zoomImage('fotos/foto3.jpeg')">
+                <img src="fotos/foto3.jpeg" alt="Foto 3">
+                <p class="photo-date">21 de Janeiro de 2024</p>
+            </div>
+            
+            <div class="photo-frame" onclick="zoomImage('fotos/foto2.jpeg')">
+                <img src="fotos/foto2.jpeg" alt="Foto 2">
+                <p class="photo-date">23 de Abril de 2024</p>
+            </div>
+            
+            <div class="photo-frame" onclick="zoomImage('fotos/foto20.jpeg')">
+                <img src="fotos/foto20.jpeg" alt="Foto 1">
+                <p class="photo-date">10 de Maio de 2024</p>
+            </div>
+            
+            <div class="photo-frame" onclick="zoomImage('fotos/foto5.jpeg')">
+                <img src="fotos/foto5.jpeg" alt="Foto 5">
+                <p class="photo-date">10 de Maio de 2024</p>
+            </div>
+            
+            <div class="photo-frame" onclick="zoomImage('fotos/foto6.jpeg')">
+                <img src="fotos/foto6.jpeg" alt="Foto 6">
+                <p class="photo-date">19 de Maio de 2024</p>
+            </div>
+            
+            <div class="photo-frame" onclick="zoomImage('fotos/foto8.jpeg')">
+                <img src="fotos/foto8.jpeg" alt="Foto 8">
+                <p class="photo-date">9 de Julho de 2024</p>
+            </div>
+            
+            <div class="photo-frame" onclick="zoomImage('fotos/foto7.jpeg')">
+                <img src="fotos/foto7.jpeg" alt="Foto 7">
+                <p class="photo-date">18 de Julho de 2024</p>
+            </div>
+            
+            <div class="photo-frame" onclick="zoomImage('fotos/foto17.jpeg')">
+                <img src="fotos/foto17.jpeg" alt="Foto 14">
+                <p class="photo-date">2 de Agosto de 2024</p>
+            </div>
+            
+            <div class="photo-frame" onclick="zoomImage('fotos/foto9.jpeg')">
+                <img src="fotos/foto9.jpeg" alt="Foto 9">
+                <p class="photo-date">2 de Agosto de 2024</p>
+            </div>
+            
+            <div class="photo-frame" onclick="zoomImage('fotos/foto10.jpeg')">
+                <img src="fotos/foto10.jpeg" alt="Foto 10">
+                <p class="photo-date">28 de Agosto de 2024</p>
+            </div>
+            
+            <div class="photo-frame" onclick="zoomImage('fotos/foto16.jpeg')">
+                <img src="fotos/foto16.jpeg" alt="Foto 4">
+                <p class="photo-date">28 de Agosto de 2024</p>
+            </div>
+            
+            <div class="photo-frame" onclick="zoomImage('fotos/foto21.jpeg')">
+                <img src="fotos/foto21.jpeg" alt="Foto 14">
+                <p class="photo-date">26 de Outubro de 2024</p>
+            </div>
+            
+            <div class="photo-frame" onclick="zoomImage('fotos/foto22.jpeg')">
+                <img src="fotos/foto22.jpeg" alt="Foto 11">
+                <p class="photo-date">27 de Outubro de 2024</p>
+            </div>
+            
+            <div class="photo-frame" onclick="zoomImage('fotos/foto12.jpeg')">
+                <img src="fotos/foto12.jpeg" alt="Foto 12">
+                <p class="photo-date">5 de Outubro de 2024</p>
+            </div>
+            
+            <div class="photo-frame" onclick="zoomImage('fotos/foto13.jpeg')">
+                <img src="fotos/foto13.jpeg" alt="Foto 13">
+                <p class="photo-date">5 de Outubro de 2024</p>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Div para mostrar a imagem ampliada -->
+    <div id="zoomedImageContainer" onclick="closeZoom()">
+        <img id="zoomedImage" src="" alt="Imagem Ampliada">
+    </div>
+
+    <script>
+        function zoomImage(imageSrc) {
+            const zoomedImageContainer = document.getElementById('zoomedImageContainer');
+            const zoomedImage = document.getElementById('zoomedImage');
+            zoomedImage.src = imageSrc;
+            zoomedImageContainer.style.display = 'flex';
+        }
+
+        function closeZoom() {
+            const zoomedImageContainer = document.getElementById('zoomedImageContainer');
+            zoomedImageContainer.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

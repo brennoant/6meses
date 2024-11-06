@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #FFC1C1, #FFE5E5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    padding: 20px;
+    overflow-x: hidden; /* Impede o overflow horizontal em telas pequenas */
+}
+
+/* Container da galeria */
+.gallery-container {
+    text-align: center;
+    padding: 20px;
+    background: #FFF8F8;
+    min-width: 320px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Título da galeria */
+.gallery-container h1 {
+    font-size: 2rem;
+    color: #CC1F1F;
+    margin-bottom: 20px;
+}
+
+/* Galeria de fotos com flexbox */
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Permite a quebra de linha das imagens */
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Caixa da foto */
+.photo-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Imagem com borda */
+.photo-frame img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid #FF7676; /* Borda na imagem */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+/* Efeito de hover nas imagens */
+.photo-frame img:hover {
+    transform: scale(1.05);
+}
+
+/* Data fora da imagem */
+.photo-date {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    color: #777;
+    font-style: italic;
+}
+
+/* Estilo do zoom */
+#zoomedImageContainer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+#zoomedImageContainer img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+/* Botão de voltar */
+.back-button {
+    background-color: #FF7676;
+    color: #FFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #FF4C4C;
+}
+
+/* Botão para a galeria */
+.gallery-button {
+    background-color: #FF7676;
+    color: #FFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.gallery-button:hover {
+    background-color: #FF4C4C;
+}
+
+/* Botão inicial */
+.initial-button {
+    margin-top: 20px;
+}
+
+/* Container da carta */
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+.card {
+    background: #FFF8F8;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Título */
+h1 {
+    font-size: 2rem;
+    color: #CC1F1F;
+    margin-bottom: 20px;
+}
+
+/* Conteúdo da carta */
+.letter-content {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Botão */
+button {
+    background-color: #FF7676;
+    color: #FFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #FF4C4C;
+}
